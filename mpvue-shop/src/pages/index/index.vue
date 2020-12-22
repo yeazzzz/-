@@ -3,7 +3,7 @@
     <!-- 头部搜索 -->
     <div class="search">
       <div @click="toMappage">{{ cityName }}</div>
-      <div>
+      <div @click="toSearch">
         <input type="text" placeholder="搜索商品" style="text-align: center" />
         <span class="icon"></span>
       </div>
@@ -187,7 +187,7 @@ export default {
         },
       });
     },
-    // 异步请求
+    // 异步请求获取数据库数据
     async getData() {
       //后端提供接口url自己随便定义 http://localhost:8080/lm/index/index
       const data = await get("/index/index");
@@ -198,6 +198,11 @@ export default {
       this.topicList = data.topicList;
 
       console.log(data);
+    },
+    toSearch() {
+      wx.navigateTo({
+        url: "/pages/search/main",
+      });
     },
     categroyList(id) {
       //进行页面跳转
@@ -218,6 +223,12 @@ export default {
     goodsList(info) {
       wx.navigateTo({
         url: "/pages/newgoods/main?isNew" + 1,
+      });
+    },
+    //专题
+    totopic() {
+      wx.switchTab({
+        url: "/pages/topic/main",
       });
     },
     topicdetail(id) {

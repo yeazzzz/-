@@ -3,7 +3,7 @@ Navicat MySQL Data Transfer
 
 Source Server         : nodemysql
 Source Server Version : 50550
-Source Host           : localhost:3306
+Source Host           : localhost:5757
 Source Database       : nodemysql
 
 Target Server Type    : MYSQL

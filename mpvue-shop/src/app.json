@@ -1,15 +1,18 @@
 {
   "pages": [
-    
+    "pages/goods/main",
     "pages/index/main",
+    "pages/search/main",
+    "pages/topic/main",
+    "pages/category/main",
     "pages/car/main",
     "pages/me/main",
     "pages/sort/main",
-    "pages/topic/main",
     "pages/mappage/main",
     "pages/brandlist/main",
     "pages/newgoods/main",
     "pages/topicdetail/main"
+    
     
   ],
   "window": {
@@ -38,7 +41,7 @@
       },
       {
         "text": "分类",
-        "pagePath": "pages/sort/main",
+        "pagePath": "pages/category/main",
         "iconPath": "static/images/ic_menu_sort_nor.png",
         "selectedIconPath": "static/images/ic_menu_sort_pressed.png"
       },
