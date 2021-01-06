@@ -6,7 +6,7 @@ module.exports = async (ctx) => {
     ad_position_id: 1
   }).select()
 
-  //tab类型
+  //分类类型
   const channel = await mysql('nideshop_channel').select()
   //商品列表
   const brandList = await mysql('nideshop_brand').select()

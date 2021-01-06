@@ -7,7 +7,7 @@ export default {
     wx.setStorageSync("logs", logs);
     var userInfo = {
       openId: "ovjXH5CQckPYFQsSitOPebeFEHjM",
-      nickName: "YZX",
+      nickName: "yzx",
       gender: 1,
       language: "zh_CN",
       city: "Foshan",
@@ -15,13 +15,16 @@ export default {
       country: "China",
       avatarUrl:
         "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIbWFEIJj8IpGeHM7dGic1aTFZALjWcMm9ltWfFiaQfVRYticWBfgGfzXWMt2EkJWiaicPtftHAlWxUibxQ/132",
-      watermark: { timestamp: 1535513485, appid: "wxd7df7c1fbebe2b26" },
+      watermark: { appid: "wxd7df7c1fbebe2b26" },
     };
     var openId = userInfo.openId;
     wx.setStorageSync("userInfo", userInfo);
     wx.setStorageSync("openId", openId);
-    //获取openid
     console.log(openId);
+    // 获取openid
+    // if (!wx.getStorageSync("openid")) {
+    //   getOpenid();
+    // }
   },
 };
 </script>

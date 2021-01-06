@@ -199,5 +199,5 @@ export default {
 };
 </script>
 <style lang='less' scoped>
-@import "./style";
+@import "./style.less";
 </style>

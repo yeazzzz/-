@@ -21,11 +21,7 @@
       >
         <!-- 3秒跳转，轮播图点 -->
         <!-- block无意义，单纯拿来做循坏 -->
-        <block
-          v-for="(item, index) in banner"
-          :key="index"
-          @click="categroylist(item.id)"
-        >
+        <block v-for="(item, index) in banner" :key="index">
           <!-- 每张轮播图 -->
           <swiper-item class="swiper-item">
             <image class="slide-image" :src="item.image_url" />
@@ -38,14 +34,14 @@
       <div
         v-for="(item, index) in channel"
         :key="index"
-        @click="categroyList(item.id)"
+        @click="categoryList(item.id)"
       >
         <img v-bind:src="item.icon_url" alt="" />
         <p>{{ item.name }}</p>
       </div>
     </div>
     <div class="brand">
-      <div @click="tobrandList" class="head">品牌制造商直供</div>
+      <div class="head">品牌制造商直供</div>
       <div class="content">
         <div
           @click="branddetail(item.id)"
@@ -61,7 +57,8 @@
       </div>
     </div>
     <div class="newgoods">
-      <div class="newgoods-top" @click="goodsList('new')">
+      <!-- @click="goodsList('new')" -->
+      <div class="newgoods-top">
         <div class="top">
           <p>新品首发</p>
           <p>查看全部</p>
@@ -204,15 +201,10 @@ export default {
         url: "/pages/search/main",
       });
     },
-    categroyList(id) {
+    categoryList(id) {
       //进行页面跳转
       wx.navigateTo({
-        url: "/pages/categroyList/main?id=" + id,
-      });
-    },
-    tobrandList() {
-      wx.navigateTo({
-        url: "/pages/brandlist/main",
+        url: "/pages/categorylist/main?id=" + id,
       });
     },
     branddetail(id) {
@@ -220,9 +212,9 @@ export default {
         url: "/pages/branddetail/main?id=" + id,
       });
     },
-    goodsList(info) {
+    goodsDetail(id) {
       wx.navigateTo({
-        url: "/pages/newgoods/main?isNew" + 1,
+        url: "/pages/goods/main?id=" + id,
       });
     },
     //专题
@@ -239,8 +231,6 @@ export default {
   },
 };
 </script>
-
-
 
 <style lang="less" scoped>
 @import "./style.less";

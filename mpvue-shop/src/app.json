@@ -1,19 +1,17 @@
 {
   "pages": [
-    "pages/goods/main",
     "pages/index/main",
+    "pages/goods/main",
     "pages/search/main",
     "pages/topic/main",
+    "pages/topicdetail/main",
     "pages/category/main",
-    "pages/car/main",
-    "pages/me/main",
-    "pages/sort/main",
+    "pages/categorylist/main",
+    "pages/addaddress/main",
+    "pages/addressSelect/main",
+    "pages/order/main",
     "pages/mappage/main",
-    "pages/brandlist/main",
-    "pages/newgoods/main",
-    "pages/topicdetail/main"
-    
-    
+    "pages/branddetail/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -44,19 +42,8 @@
         "pagePath": "pages/category/main",
         "iconPath": "static/images/ic_menu_sort_nor.png",
         "selectedIconPath": "static/images/ic_menu_sort_pressed.png"
-      },
-      {
-        "text": "购物车",
-        "pagePath": "pages/car/main",
-        "iconPath": "static/images/ic_menu_shoping_nor.png",
-        "selectedIconPath": "static/images/ic_menu_shoping_pressed.png"
-      },
-      {
-        "text": "我的",
-        "pagePath": "pages/me/main",
-        "iconPath": "static/images/ic_menu_me_nor.png",
-        "selectedIconPath": "static/images/ic_menu_me_pressed.png"
       }
+    
     ],
     "position": "bottom"
   }, 
